@@ -1,10 +1,8 @@
 function add(m1, m2) {
-    var sumMatrix = [...m1];
-    sumMatrix = clearMatrix[sumMatrix];
-
+    let sumMatrix = Array.from(m1);
     for (var i = 0; i < m1.length; i++) {
         for (var j = 0; j < m1[i].length; j++) {
-            sumMatrix[i][j] = m1[i][j] + m2[i][j];
+            sumMatrix[i][j] +=  m2[i][j];
         }
     }
     return sumMatrix;
