@@ -11,3 +11,17 @@ function matrixDimensionsEqual(m1, m2) {
 
     return false;
 }
+
+function isVector(mv) {
+    if (Array.isArray(mv) && mv.length > 0) {
+        return (!Array.isArray(mv[0]));
+    }
+
+    return false;
+}
+
+const mdArray = [[1,2], [3,4], [5,6]];
+const vect = [1,2,3,4,5];
+console.log((typeof mdArray));
+console.log(`Is MD Array a vector: ${(isVector(mdArray))}`);
+console.log(`Is vect a vector: ${(isVector(vect))}`);

@@ -23,3 +23,8 @@ const m2 = [[10, 20], [30,40], [50, 60]];
 
 const result = add(m1, m2);
 console.log(result);
+
+const v1 = [1,2,3,4,5];
+const v2 = [10,20,30,40,50];
+const result2 = add(v1, v2);
+console.log(result2);
