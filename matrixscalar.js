@@ -7,6 +7,16 @@ function addScalar(m, s) {
         return m.map( (i) => i + s);
     }
 }
+
+function multiplyScalar(m, s) {
+    if (Array.isArray(m) && Array.isArray(m[0])) {
+        return m.map( (e) => {
+             return e.map( (i) => i * s);
+        });
+    } else {
+        return m.map( (i) => i * s);
+    }
+}
    
 let v3 = [1,2,3,4,5];
 let m3 = [[1,2,3], [4,5,6], [7,8,9]];
