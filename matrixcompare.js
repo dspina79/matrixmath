@@ -20,8 +20,22 @@ function isVector(mv) {
     return false;
 }
 
+function getDimensions(mv) {
+    let arr = [];
+    if(isVector(mv)) {
+        arr.push(mv.length);
+    } else {
+        arr.push(mv.length);
+        arr.push(mv[0].length);
+    }
+
+    return arr;
+}
+
 const mdArray = [[1,2], [3,4], [5,6]];
 const vect = [1,2,3,4,5];
 console.log((typeof mdArray));
 console.log(`Is MD Array a vector: ${(isVector(mdArray))}`);
 console.log(`Is vect a vector: ${(isVector(vect))}`);
+console.log(getDimensions(mdArray));
+console.log(getDimensions(vect));
